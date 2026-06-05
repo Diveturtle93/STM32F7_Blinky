@@ -23,7 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "BasicUart.h"
+#include "basicuart.h"
+#include "version.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,6 +96,15 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   uartTransmitString("\vHello Diveturtle93\n");
+  uartTransmitString("Revision:\t");
+  uartTransmitNumber(MAJOR, 10);
+  uartTransmit(".", 1);
+  uartTransmitNumber(MINOR, 10);
+  uartTransmit(".", 1);
+  uartTransmitNumber(PATCH, 10);
+  uartTransmit(".", 1);
+  uartTransmitNumber(DEV, 10);
+  uatrTransmit("\n", 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
