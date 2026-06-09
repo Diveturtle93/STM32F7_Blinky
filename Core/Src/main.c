@@ -104,7 +104,7 @@ int main(void)
   uartTransmitNumber(PATCH, 10);
   uartTransmit(".", 1);
   uartTransmitNumber(DEV, 10);
-  uatrTransmit("\n", 1);
+  uartTransmit("\n", 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
